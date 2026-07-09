@@ -1,5 +1,5 @@
 ---
-name: kirupa-technical-casual
+name: technical-casual
 description: Write technical explainers in Kirupa's casual, example-first format. Use when teaching a technical topic to developers or curious learners with a friendly voice, a concrete running example, frequent visuals, step-by-step buildup, rejected alternatives, and a closing section on real-world applications.
 ---
 
@@ -257,8 +257,6 @@ Examples:
 - file/folder view to tree view
 - objects on a desk to nodes in a graph
 - packets in motion to a routing table
-
-This lets the reader keep the intuition while upgrading to a more formal mental model.
 
 ### 9. Talk About Performance Only After Intuition Exists
 
