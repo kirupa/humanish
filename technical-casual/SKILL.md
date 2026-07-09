@@ -1,13 +1,13 @@
 ---
 name: technical-casual
-description: Write technical explainers in Kirupa's casual, example-first format. Use when teaching a technical topic to developers or curious learners with a friendly voice, a concrete running example, frequent visuals, step-by-step buildup, rejected alternatives, and a closing section on real-world applications.
+description: Write technical explainers in Kirupa's casual, visual, example-driven format. Use when teaching a technical topic to developers or curious learners with a friendly voice, strong intuition-building, concrete examples, playful but precise language, frequent diagrams, and a structure that may use walkthroughs, comparisons, toy implementations, or real-world applications.
 ---
 
 # Kirupa Technical Casual
 
 Write like you are a technically sharp friend walking someone through a tricky idea on a whiteboard.
 
-This skill is modeled on Kirupa's article format from "Understanding Merkle Trees." The goal is not to copy the topic or surface wording. The goal is to reproduce the teaching pattern: warm, concrete, visual, playful, and methodical.
+This skill is modeled on Kirupa's broader technical writing style, with "Understanding Merkle Trees" as one strong example among several. The goal is not to copy the topic or surface wording. The goal is to reproduce the teaching pattern: warm, concrete, visual, playful, energetic, and methodical.
 
 ## Use This Skill When
 
@@ -17,6 +17,7 @@ Use this skill when the user wants:
 - a tutorial-style article, guide, lesson, or blog post
 - writing that feels human, clear, and a little playful without becoming sloppy
 - a structure that benefits from diagrams, evolving visuals, or state-by-state walkthroughs
+- a writeup that should build intuition before getting formal
 
 Do not use this skill for:
 
@@ -34,19 +35,19 @@ The reader should feel like:
 
 - they always know why the topic matters
 - they can picture the system in their head
-- they understand not just the right answer, but why simpler answers fail
+- they understand the right answer and, when relevant, why simpler answers fail
 - they could explain the concept to someone else after finishing
 
 ## Signature Traits
 
-Kirupa's format has six defining traits:
+Kirupa's style has six defining traits:
 
 1. Start with a plain-English reason to care.
-2. Build around one concrete running example.
-3. Teach by comparing multiple approaches, including flawed ones.
-4. Advance the explanation in discrete steps with visuals after every important state change.
+2. Build understanding through a concrete example, analogy, toy model, or repeated transformation.
+3. Teach by sequencing insight carefully, sometimes through comparisons or flawed approaches.
+4. Advance the explanation in discrete stages with visuals after important conceptual shifts.
 5. Mix real technical precision with conversational asides.
-6. End by reconnecting the concept to recognizable real-world systems.
+6. End with either a recap, broader application, implementation angle, or a final playful aside.
 
 If your draft does not do all six, it is missing the format.
 
@@ -110,6 +111,8 @@ Good uses:
 - a light aside after a dense section
 - a self-aware line before entering a buzzy domain
 - a playful image beat after technical buildup
+- a tiny burst of exaggeration for emphasis
+- a pop-culture, game, or cartoon reference used as seasoning
 
 Examples of the move, not the exact wording:
 
@@ -119,6 +122,13 @@ Examples of the move, not the exact wording:
 - "neat, right?"
 
 Personality should relieve pressure, not hijack the lesson.
+
+Common personality markers in this style:
+
+- controlled exaggeration like `very VERY`, `ridiculously`, or `bazillion`
+- playful parentheticals
+- slightly goofy phrasing that still preserves clarity
+- a short rhetorical flourish before a walkthrough or payoff
 
 ### Jargon Handling
 
@@ -138,13 +148,91 @@ Example pattern:
 
 Do not lead with terminology unless the user explicitly asked for a dense expert treatment.
 
+## Common Article Modes
+
+Kirupa does not use one rigid structure for every topic. Pick the mode that best fits the material.
+
+### 1. Design-Tradeoff Explainer
+
+Use this when the topic solves an engineering problem with competing constraints.
+
+Common pattern:
+
+- establish the problem
+- show a few plausible approaches
+- explain where they fail
+- introduce the real solution
+- walk through the mechanics
+- connect to production use cases
+
+Best for topics like:
+
+- Merkle trees
+- Bloom filters
+- hybrid system design
+
+### 2. Worked Conversion or Model Explainer
+
+Use this when the topic is mostly about learning a repeatable transformation or mental model.
+
+Common pattern:
+
+- start with a familiar baseline
+- introduce the general model
+- apply the model repeatedly
+- flip the direction and reverse the transformation
+- recap the rule set
+
+Best for topics like:
+
+- binary/hex conversion
+- unit conversions
+- notation changes
+
+### 3. Visual Walkthrough Explainer
+
+Use this when the concept is easiest to understand by watching a repeated filtering, traversal, or update process.
+
+Common pattern:
+
+- establish a metaphor or physical analogy
+- show a starting state
+- walk through each repeated action
+- summarize the algorithm
+- show code and performance after intuition lands
+
+Best for topics like:
+
+- sieve-style algorithms
+- tree/graph traversals
+- elimination processes
+
+### 4. Toy Implementation Plus Practical Warning Explainer
+
+Use this when a simplified version helps teach the concept, but the real lesson includes why production code is harder.
+
+Common pattern:
+
+- define the concept
+- list what makes a good version of it
+- build a toy implementation
+- show where the toy version breaks
+- point the reader to real-world implementations
+
+Best for topics like:
+
+- hash functions
+- parsers
+- caching policies
+- compressors
+
 ## Structural Blueprint
 
 Follow this article architecture unless the topic strongly resists it.
 
 ### 1. Open With Context and a Tiny Hook
 
-The introduction should do four things quickly:
+The introduction should usually do four things quickly:
 
 - name the concept
 - give a human-scale reason it matters
@@ -155,9 +243,16 @@ An optional joke or light aside can appear here.
 
 Do not start with a dictionary definition alone.
 
+Other opener styles that still fit this voice:
+
+- a provocative question
+- a weird comparison
+- a playful exaggerated claim
+- a "what does X have to do with Y?" setup
+
 ### 2. Introduce One Running Example Early
 
-Find a single scenario that can carry most of the article.
+Find a single scenario, toy example, analogy, or transformation model that can carry most of the article.
 
 The best running examples are:
 
@@ -176,7 +271,7 @@ Examples of good containers:
 - caching web pages
 - drawing layers in a graphics app
 
-Stay with this example for most of the core explanation. Do not keep switching metaphors.
+Stay with this anchor for most of the core explanation. Do not keep switching metaphors unless the article explicitly pivots to a more formal representation later.
 
 ### 3. Freeze the Initial State
 
@@ -194,7 +289,7 @@ This gives the article a plot.
 
 ### 4. Ask the Reader to Think First
 
-Before presenting the final answer, briefly invite the reader to reason about the problem.
+Before presenting the final answer, briefly invite the reader to reason about the problem when that helps.
 
 Typical move:
 
@@ -203,11 +298,11 @@ Typical move:
 
 This creates buy-in and makes the final design feel earned.
 
-### 5. Walk Through Plausible but Imperfect Approaches
+### 5. Walk Through Plausible but Imperfect Approaches When Helpful
 
 This is one of the strongest parts of the format.
 
-Before introducing the correct solution, show 2-3 alternatives that seem reasonable and explain where each breaks.
+Before introducing the correct solution, you can show 2-3 alternatives that seem reasonable and explain where each breaks.
 
 For each approach:
 
@@ -219,6 +314,8 @@ For each approach:
 
 This section should make the final solution feel like the answer to a real design problem, not a lecture artifact.
 
+Do not force this section into topics where the better teaching move is a direct walkthrough or repeated conversion pattern.
+
 ### 6. Introduce the Real Solution as a Rescue
 
 Once the reader has seen the pain points, bring in the target concept as the resolution.
@@ -229,7 +326,7 @@ Language should signal relief and momentum:
 - "X solves this by..."
 - "The best way to see why is to keep using the same example."
 
-### 7. Break the Core Explanation Into Named Steps
+### 7. Break the Core Explanation Into Named Stages
 
 The main walkthrough should be procedural and stateful.
 
@@ -239,6 +336,14 @@ Use subsection headings like:
 - `Step 1: ...`
 - `Step 2: ...`
 - `Step 3: ...`
+
+Or, depending on the article:
+
+- `A Walkthrough`
+- `Initial Setup`
+- `Algorithm Summarized`
+- `Optimizations`
+- `The Code`
 
 Each step should:
 
@@ -278,9 +383,9 @@ The sequence should be:
 3. formal performance claim
 4. caveats and worst case
 
-### 10. Close With Real-World Applications
+### 10. Close With Real-World Applications When They Add Value
 
-Once the reader understands the mechanism, widen the lens.
+Once the reader understands the mechanism, widen the lens when that helps the concept feel grounded.
 
 Add a section showing how the concept appears in recognizable systems.
 
@@ -295,7 +400,7 @@ This is where the article cashes in its promise from the opening.
 
 ### 11. End With a Compact Recap
 
-The conclusion should:
+The conclusion should usually:
 
 - restate the concept plainly
 - summarize the core advantage
@@ -304,13 +409,19 @@ The conclusion should:
 
 The recap should sound like a useful closing synthesis, not a perfunctory summary.
 
+Optional Kirupa-style finishers include:
+
+- a quick implementation pointer
+- a broadened comparison to related tools
+- a final joke, game reference, or unrelated callback image
+
 ## Visual Teaching Rules
 
 This format is heavily visual. Images are not decoration. They are the explanation.
 
 ### What the Images Do
 
-In the Merkle article, images do at least seven jobs:
+Across these articles, images do at least eight jobs:
 
 1. Introduce the cast of objects in the running example.
 2. Freeze the before-state.
@@ -319,12 +430,21 @@ In the Merkle article, images do at least seven jobs:
 5. Highlight matches and mismatches visually.
 6. Reframe the same idea in a more abstract diagram.
 7. Ground real-world applications in simplified structures.
+8. Reinforce pacing through humor, comparison, formulas, or code screenshots.
 
 Your article should use visuals the same way.
 
-### Preferred Visual Pattern
+### Preferred Visual Patterns
 
-Keep the same base scene and mutate it over time.
+Kirupa commonly uses one of these patterns:
+
+- keep the same base scene and mutate it over time
+- repeat the same conversion model with new inputs
+- use one comparison image to set up a tradeoff
+- use a metaphor image first, then switch to the technical diagram
+- use a code screenshot or graph after the conceptual explanation lands
+
+If the article is stateful, keep the same base scene and mutate it over time.
 
 That means:
 
@@ -379,6 +499,9 @@ Use these moves often:
 - highlighted paths to show "only this part changed"
 - a single fingerprint/root/badge to summarize many details
 - a second diagram that abstracts the first into a tree/graph view
+- a formula image immediately after an intuition paragraph
+- a repeated frame with one new number, flag, or crossed-out item
+- a benchmark chart or code screenshot near the end
 
 ### Humor Images
 
@@ -429,6 +552,18 @@ Prefer:
 
 - "Because the root depends on those child hashes, any change below bubbles up and changes the root too."
 
+### Teach, Then Restate More Simply
+
+This is one of the most common Kirupa moves.
+
+After introducing a concept:
+
+- explain it in technical terms
+- restate it in friendlier or more visual language
+- optionally repeat the mechanic with a second example
+
+The reader should feel the concept twice: once intellectually and once intuitively.
+
 ### Keep Asking Small Questions
 
 Useful rhetorical prompts include:
@@ -455,6 +590,26 @@ This is especially useful after:
 - complexity analysis
 - security explanations
 - graph/tree terminology
+- formula-heavy passages
+
+### Build the Toy Version First When Appropriate
+
+For some topics, the best way to teach the concept is to create a simplified version first.
+
+Use this sequence:
+
+1. build the toy version
+2. show how it works
+3. reveal its weakness
+4. explain why production-grade versions are harder or more sophisticated
+
+This is especially useful for:
+
+- hash functions
+- parsers
+- indexes
+- data compression
+- caching
 
 ### Preserve Technical Correctness
 
@@ -490,7 +645,7 @@ Do not:
 - open with a stiff encyclopedia definition
 - dump jargon before intuition exists
 - bounce between unrelated metaphors
-- explain only the correct approach without showing why it is needed
+- explain only the correct approach without showing why it is needed when the topic benefits from tradeoffs or contrast
 - use images as generic filler
 - overdo humor
 - sound like marketing copy
@@ -502,21 +657,19 @@ Do not:
 When asked to write in this format, follow this working order:
 
 1. Identify the concept's job in plain English.
-2. Pick a running example that can carry the whole lesson.
+2. Pick the best teaching anchor: running example, analogy, toy implementation, or repeated conversion model.
 3. Define the clean starting state.
-4. Choose one meaningful change or failure event.
-5. List 2-3 naive or partial approaches.
-6. Explain why each is insufficient.
-7. Introduce the real concept as the fix.
-8. Break the fix into sequential steps.
-9. Attach a diagram idea to each important state.
-10. Add a performance or scaling section.
-11. Add real-world applications.
-12. End with a crisp recap.
+4. Choose the article mode that best fits the topic.
+5. Decide whether failed or partial approaches help.
+6. Introduce the core mechanic through stages, examples, or a walkthrough.
+7. Attach a diagram idea to each important conceptual shift.
+8. Add a code, algorithm summary, optimization, or performance section when relevant.
+9. Add real-world applications if they genuinely strengthen the article.
+10. End with a crisp recap.
 
 ## Default Article Template
 
-Use this outline by default:
+Use an outline like one of these by default:
 
 1. Hook and why this matters
 2. Running example introduction
@@ -533,17 +686,48 @@ Use this outline by default:
 13. Real-world applications
 14. Conclusion and recap
 
+Or:
+
+1. Hook and weird/familiar comparison
+2. Familiar baseline
+3. General model
+4. Example conversion 1
+5. Example conversion 2
+6. Reverse direction
+7. Summary and recap
+
+Or:
+
+1. Hook and metaphor
+2. Visual walkthrough
+3. Algorithm summarized
+4. Code
+5. Performance characteristics
+6. Conclusion
+
+Or:
+
+1. Hook and use cases
+2. Definition
+3. Criteria for a good version
+4. Toy implementation
+5. Why the toy version fails
+6. Production reality
+7. Code/example
+8. Conclusion
+
 ## Drafting Checklist
 
 Before delivering, verify:
 
-- the concept is grounded in one stable running example
+- the concept is grounded in one stable teaching anchor
 - the article has a clear before-state and after-state
-- at least two alternative approaches were considered when appropriate
+- alternative approaches were considered when appropriate
 - every major conceptual jump has a corresponding visual or diagram direction
 - the voice sounds like a human teacher, not product copy
 - jargon appears after intuition, not before
 - the conclusion reconnects to the main mental model
+- the tone has some personality without turning into a bit
 
 ## Litmus Test
 
