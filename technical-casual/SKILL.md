@@ -1,13 +1,13 @@
 ---
 name: technical-casual
-description: Write technical explainers in Kirupa's casual, visual, example-driven format. Use when teaching a technical topic to developers or curious learners with a friendly voice, strong intuition-building, concrete examples, playful but precise language, frequent diagrams, and a structure that may use walkthroughs, comparisons, toy implementations, or real-world applications.
+description: Write technical explainers in a casual, visual, example-driven format. Use when teaching a technical topic to developers or curious learners with a friendly voice, strong intuition-building, concrete examples, playful but precise language, frequent diagrams, and a structure that may use walkthroughs, comparisons, toy implementations, or real-world applications.
 ---
 
-# Kirupa Technical Casual
+# Technical Casual
 
 Write like you are a technically sharp friend walking someone through a tricky idea on a whiteboard.
 
-This skill is modeled on Kirupa's broader technical writing style, with "Understanding Merkle Trees" as one strong example among several. The goal is not to copy the topic or surface wording. The goal is to reproduce the teaching pattern: warm, concrete, visual, playful, energetic, and methodical.
+This skill is designed to capture a broader technical writing pattern built around clarity, momentum, visuals, and intuition. The goal is not to copy any one topic or any one author. The goal is to reproduce a teaching pattern that feels warm, concrete, visual, playful, energetic, and methodical.
 
 ## Use This Skill When
 
@@ -40,7 +40,7 @@ The reader should feel like:
 
 ## Signature Traits
 
-Kirupa's style has six defining traits:
+This style has six defining traits:
 
 1. Start with a plain-English reason to care.
 2. Build understanding through a concrete example, analogy, toy model, or repeated transformation.
@@ -143,14 +143,14 @@ Preferred sequence:
 
 Example pattern:
 
-- explain the idea as "a single trustworthy fingerprint"
-- then introduce "Merkle proof"
+- explain the idea first in everyday language
+- then introduce the formal term
 
 Do not lead with terminology unless the user explicitly asked for a dense expert treatment.
 
 ## Common Article Modes
 
-Kirupa does not use one rigid structure for every topic. Pick the mode that best fits the material.
+This skill does not assume one rigid structure for every topic. Pick the mode that best fits the material.
 
 ### 1. Design-Tradeoff Explainer
 
@@ -165,11 +165,11 @@ Common pattern:
 - walk through the mechanics
 - connect to production use cases
 
-Best for topics like:
+Best for topics where:
 
-- Merkle trees
-- Bloom filters
-- hybrid system design
+- there are real engineering tradeoffs
+- the solution exists because simpler approaches break down
+- the reader benefits from seeing constraints before the mechanism
 
 ### 2. Worked Conversion or Model Explainer
 
@@ -183,11 +183,11 @@ Common pattern:
 - flip the direction and reverse the transformation
 - recap the rule set
 
-Best for topics like:
+Best for topics where:
 
-- binary/hex conversion
-- unit conversions
-- notation changes
+- the reader is learning a conversion pattern
+- the same model can be applied repeatedly
+- the concept becomes clearer through forward and reverse examples
 
 ### 3. Visual Walkthrough Explainer
 
@@ -201,11 +201,11 @@ Common pattern:
 - summarize the algorithm
 - show code and performance after intuition lands
 
-Best for topics like:
+Best for topics where:
 
-- sieve-style algorithms
-- tree/graph traversals
-- elimination processes
+- the idea unfolds through repeated filtering, traversal, or updates
+- the reader benefits from seeing the same system evolve step by step
+- a visual process is easier to grasp than a verbal summary
 
 ### 4. Toy Implementation Plus Practical Warning Explainer
 
@@ -219,12 +219,11 @@ Common pattern:
 - show where the toy version breaks
 - point the reader to real-world implementations
 
-Best for topics like:
+Best for topics where:
 
-- hash functions
-- parsers
-- caching policies
-- compressors
+- a simple version can teach the core concept
+- the production-grade version is much more nuanced
+- understanding the failure of the toy version is part of the lesson
 
 ## Structural Blueprint
 
@@ -409,7 +408,7 @@ The conclusion should usually:
 
 The recap should sound like a useful closing synthesis, not a perfunctory summary.
 
-Optional Kirupa-style finishers include:
+Optional finishers in this style include:
 
 - a quick implementation pointer
 - a broadened comparison to related tools
@@ -421,7 +420,7 @@ This format is heavily visual. Images are not decoration. They are the explanati
 
 ### What the Images Do
 
-Across these articles, images do at least eight jobs:
+In this style, images often do at least eight jobs:
 
 1. Introduce the cast of objects in the running example.
 2. Freeze the before-state.
@@ -436,7 +435,7 @@ Your article should use visuals the same way.
 
 ### Preferred Visual Patterns
 
-Kirupa commonly uses one of these patterns:
+This style commonly uses one of these patterns:
 
 - keep the same base scene and mutate it over time
 - repeat the same conversion model with new inputs
@@ -554,7 +553,7 @@ Prefer:
 
 ### Teach, Then Restate More Simply
 
-This is one of the most common Kirupa moves.
+This is one of the most common moves in this style.
 
 After introducing a concept:
 

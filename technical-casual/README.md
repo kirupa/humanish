@@ -6,4 +6,4 @@ The skills that land here should help an agent explain technical ideas clearly, 
 
 Current skill:
 
-- `technical-casual`: Kirupa-style technical explainer format built around a concrete example, step-by-step visuals, rejected alternatives, and real-world applications
+- `technical-casual`: general-purpose technical explainer format built around concrete examples, step-by-step visuals, intuition-building, and clear human-sounding prose
