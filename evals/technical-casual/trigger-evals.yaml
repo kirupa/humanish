@@ -1,0 +1,78 @@
+version: 1
+skill: technical-casual
+eval_type: trigger
+cases:
+  - id: tc_trigger_001
+    should_trigger: true
+    title: Vector clocks explainer
+    prompt: |
+      Write a beginner-friendly article explaining vector clocks to application developers.
+      Use a concrete example and keep the tone relaxed.
+    rationale:
+      - long-form technical explainer
+      - intuition-building is important
+      - a concrete example would help
+
+  - id: tc_trigger_002
+    should_trigger: true
+    title: Reference counting walkthrough
+    prompt: |
+      Explain reference counting in memory management in a visual, step-by-step way for junior engineers.
+    rationale:
+      - walkthrough-based teaching prompt
+      - visual explanation is requested directly
+
+  - id: tc_trigger_003
+    should_trigger: true
+    title: Base64 tutorial
+    prompt: |
+      Create a tutorial-style explainer on how Base64 encoding works.
+      Build intuition first and avoid sounding formal.
+    rationale:
+      - concept benefits from model-based explanation
+      - tone request matches the skill
+
+  - id: tc_trigger_004
+    should_trigger: true
+    title: Cache invalidation tradeoff explainer
+    prompt: |
+      Teach me cache invalidation like I'm a software engineer who knows the basics but wants a good mental model.
+    rationale:
+      - engineering tradeoffs
+      - concept is abstract but teachable through examples
+
+  - id: tc_trigger_005
+    should_trigger: false
+    title: API reference request
+    prompt: |
+      Write terse API documentation for a function called fetchWithRetry, including parameters, return type, and exceptions.
+    rationale:
+      - reference docs, not an explainer
+      - the skill should stay out of the way
+
+  - id: tc_trigger_006
+    should_trigger: false
+    title: Release notes request
+    prompt: |
+      Draft concise release notes for version 2.4.1 with bug fixes and dependency updates.
+    rationale:
+      - changelog format
+      - no need for the teaching pattern
+
+  - id: tc_trigger_007
+    should_trigger: false
+    title: Formal abstract request
+    prompt: |
+      Write a formal abstract about eventual consistency in distributed systems for an academic audience.
+    rationale:
+      - formal register requested
+      - the casual voice is a bad fit
+
+  - id: tc_trigger_008
+    should_trigger: false
+    title: One-paragraph summary request
+    prompt: |
+      Summarize this benchmark result in one neutral paragraph for an internal memo.
+    rationale:
+      - concise summary task
+      - no room for the skill's full structure

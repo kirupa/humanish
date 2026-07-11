@@ -1,0 +1,128 @@
+version: 1
+skill: technical-casual
+eval_type: generation
+comparison: baseline_vs_skill
+cases:
+  - id: tc_gen_001
+    mode: design_tradeoff
+    title: Cache invalidation
+    prompt: |
+      Write a technical explainer for software engineers that teaches cache invalidation.
+      Make it approachable, concrete, and useful for someone who knows web development basics.
+    should_demonstrate:
+      - opens with why the problem matters
+      - uses a stable example such as a product page, CMS, or profile data cache
+      - compares at least two naive approaches or failure modes
+      - explains the actual solution through clear stages
+      - suggests diagrams or clearly frames state changes
+    should_avoid:
+      - dictionary-definition opening
+      - generic hype language
+      - double dashes
+
+  - id: tc_gen_002
+    mode: visual_walkthrough
+    title: Reference counting memory management
+    prompt: |
+      Explain reference counting in memory management for junior developers.
+      Make the explanation visual and easy to follow.
+    should_demonstrate:
+      - uses objects, pointers, or ownership as a visual anchor
+      - walks through a sequence where counts go up and down
+      - explains when cleanup happens
+      - clarifies at least one weakness, such as cycles
+      - keeps jargon behind intuition
+    should_avoid:
+      - abstract-only explanation
+      - unexplained jargon in the opening
+      - double dashes
+
+  - id: tc_gen_003
+    mode: conversion_model
+    title: Base64 encoding
+    prompt: |
+      Create a tutorial-style article on how Base64 encoding works.
+      Assume the reader is technical but has never thought deeply about the transformation.
+    should_demonstrate:
+      - starts with a familiar baseline
+      - introduces a repeatable model
+      - walks through forward transformation using a concrete example
+      - translates the concept back into simpler language after technical detail
+      - uses diagram suggestions or visual staging
+    should_avoid:
+      - skipping straight to formal definitions
+      - metaphor hopping
+      - double dashes
+
+  - id: tc_gen_004
+    mode: toy_implementation
+    title: Checksum vs cryptographic hash
+    prompt: |
+      Teach the difference between a simple checksum and a cryptographic hash.
+      Use a toy implementation first, then explain why real-world systems need something stronger.
+    should_demonstrate:
+      - builds a toy version
+      - shows where the toy version fails
+      - introduces stronger real-world requirements
+      - preserves technical clarity
+      - keeps the tone accessible
+    should_avoid:
+      - pretending the toy implementation is production-grade
+      - salesy adjectives
+      - double dashes
+
+  - id: tc_gen_005
+    mode: design_tradeoff
+    title: Rate limiting
+    prompt: |
+      Write an explainer on rate limiting for backend engineers.
+      Focus on how the common strategies differ and when each one is useful.
+    should_demonstrate:
+      - explains why rate limiting matters
+      - compares strategies like token bucket, leaky bucket, or fixed window
+      - uses a practical system or request-flow example
+      - surfaces tradeoffs clearly
+    should_avoid:
+      - flat list of definitions only
+      - double dashes
+
+  - id: tc_gen_006
+    mode: visual_walkthrough
+    title: B-tree indexing
+    prompt: |
+      Explain how B-tree indexes work in databases for application developers who know SQL but not storage internals.
+    should_demonstrate:
+      - uses a visual tree or page-based anchor
+      - walks through insertion or lookup in stages
+      - explains why the structure is useful on disk
+      - keeps the tone conversational
+    should_avoid:
+      - jumping into implementation details too early
+      - double dashes
+
+  - id: tc_gen_007
+    mode: boundary_concise
+    title: Debounce vs throttle
+    prompt: |
+      Explain the difference between debounce and throttle in a way a frontend engineer can absorb quickly.
+      Keep it compact, but still make it intuitive.
+    should_demonstrate:
+      - stays compact without going dry
+      - uses one quick example or timeline anchor
+      - improves intuition despite the shorter length
+    should_avoid:
+      - forcing a full long-form article structure
+      - double dashes
+
+  - id: tc_gen_008
+    mode: negative_fit_guard
+    title: API docs control
+    prompt: |
+      Write concise API reference docs for a function named makeSignedUrl.
+    expected_outcome:
+      - baseline should likely beat the skill-assisted version
+      - if the skill is forced on, it should score poorly on trigger fit
+    should_avoid:
+      - tutorial framing
+      - unnecessary metaphors
+      - double dashes

@@ -1,0 +1,61 @@
+version: 1
+skill: technical-casual
+eval_type: regression
+checks:
+  - id: tc_reg_001
+    name: no_double_dashes
+    priority: high
+    description: Output should not use double dashes as interruption or emphasis punctuation.
+    failure_signals:
+      - contains the literal token "--" in body prose
+    preferred_fix:
+      - replace with a comma
+      - split into a shorter sentence
+
+  - id: tc_reg_002
+    name: intuition_before_jargon
+    priority: high
+    description: The opening should not begin with dense terminology before the reader has a foothold.
+    failure_signals:
+      - first paragraph is mostly definition language
+      - formal terms appear before any plain-language framing
+
+  - id: tc_reg_003
+    name: stable_teaching_anchor
+    priority: high
+    description: The explanation should have one stable teaching anchor where appropriate.
+    failure_signals:
+      - example appears once and disappears
+      - multiple unrelated metaphors compete for attention
+
+  - id: tc_reg_004
+    name: visual_support_present
+    priority: medium
+    description: Long explainers should show visual thinking through diagrams or explicit image directions.
+    failure_signals:
+      - no diagram guidance in a clearly visual topic
+      - several state changes happen with no visual framing
+
+  - id: tc_reg_005
+    name: no_hype_voice
+    priority: high
+    description: The tone should be energetic without sounding like marketing copy.
+    failure_signals:
+      - overuse of words like revolutionary, game-changing, or groundbreaking
+      - grandiose praise without explanation
+
+  - id: tc_reg_006
+    name: no_forced_tradeoff_section
+    priority: medium
+    description: The skill should not force rejected alternatives into topics that do not benefit from them.
+    failure_signals:
+      - awkward or artificial "failed approaches" section in a straightforward model tutorial
+      - comparison section that does not teach anything meaningful
+
+  - id: tc_reg_007
+    name: technical_precision_preserved
+    priority: high
+    description: Accessibility should not come at the cost of correctness.
+    failure_signals:
+      - oversimplification creates a false mental model
+      - critical dependencies or caveats are omitted
