@@ -87,6 +87,8 @@ Good rhythm often looks like:
 
 Avoid paragraphs where every sentence has the same length or shape.
 
+Do not use double dashes for emphasis or interruption. If a sentence wants a pause, use a comma or break the thought into a smaller sentence instead.
+
 ### Reader Address
 
 Speak to the reader directly when useful:
@@ -645,6 +647,7 @@ Do not:
 - dump jargon before intuition exists
 - bounce between unrelated metaphors
 - explain only the correct approach without showing why it is needed when the topic benefits from tradeoffs or contrast
+- use double dashes when a comma or shorter sentence would be clearer
 - use images as generic filler
 - overdo humor
 - sound like marketing copy
