@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Technical Casual Eval Report</title>
+  <style>
+    :root {
+      --bg: #f6f1e8;
+      --paper: #fffdf9;
+      --ink: #1a1f1d;
+      --muted: #5f685f;
+      --line: #ddd2c1;
+      --accent: #0f7b6c;
+      --accent-soft: #dff4ef;
+      --warn: #a2511c;
+      --warn-soft: #fff0e4;
+      --bad: #8d2331;
+      --bad-soft: #fde8eb;
+      --good: #176b3a;
+      --good-soft: #e4f7ea;
+      --mono: "SFMono-Regular", "Menlo", "Consolas", monospace;
+      --sans: "Avenir Next", "Segoe UI", system-ui, sans-serif;
+      --serif: "Iowan Old Style", "Georgia", serif;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, #fff7db 0, rgba(255,247,219,0) 35%),
+        linear-gradient(180deg, #f7f2e9 0%, #f3ede2 100%);
+      color: var(--ink);
+      font-family: var(--sans);
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+
+    .hero {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 14px 40px rgba(44, 36, 26, 0.08);
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 10px;
+    }
+
+    h1, h2, h3 { margin: 0; }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: 44px;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      max-width: 820px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #2d332f;
+      margin: 0 0 18px;
+    }
+
+    .meta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 14px;
+      background: var(--accent-soft);
+      color: #0d5f54;
+      border: 1px solid #bfe8de;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: 0 8px 24px rgba(44, 36, 26, 0.06);
+    }
+
+    .card h2 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .metric {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .good { color: var(--good); }
+    .warn { color: var(--warn); }
+    .bad { color: var(--bad); }
+
+    .section {
+      margin-top: 28px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 12px 32px rgba(44, 36, 26, 0.06);
+    }
+
+    .section h2 {
+      font-family: var(--serif);
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .section-intro {
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    th {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .decision {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .decision-win { background: var(--good-soft); color: var(--good); }
+    .decision-loss { background: var(--bad-soft); color: var(--bad); }
+
+    .compare-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 14px;
+    }
+
+    .example {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .example h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .sample {
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      padding: 16px;
+      background: #fffdfa;
+    }
+
+    .sample h4 {
+      margin: 0 0 10px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    .sample p {
+      margin: 0;
+      line-height: 1.7;
+      white-space: pre-wrap;
+    }
+
+    .sample.baseline { background: var(--warn-soft); border-color: #f0d5be; }
+    .sample.skill { background: var(--accent-soft); border-color: #bfe8de; }
+
+    .mono {
+      font-family: var(--mono);
+      font-size: 13px;
+    }
+
+    ul {
+      margin: 12px 0 0 20px;
+      color: #2d332f;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 980px) {
+      .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .compare-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 34px; }
+      .cards { grid-template-columns: 1fr; }
+      table { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <p class="eyebrow">Eval Run</p>
+      <h1>Technical Casual Smoke Test</h1>
+      <p>
+        This report shows one manual eval pass for the <span class="mono">technical-casual</span> skill.
+        It covers trigger behavior across the full suite and generation scoring across all eight generation cases,
+        with representative side-by-side output excerpts where the difference is easiest to see.
+      </p>
+      <div class="meta">
+        <span class="pill">Skill: technical-casual</span>
+        <span class="pill">Run Type: manual smoke test</span>
+        <span class="pill">Date: 2026-07-11</span>
+      </div>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <h2>Trigger Pass Rate</h2>
+        <div class="metric good">100%</div>
+        <div>All 8 trigger checks matched expectation.</div>
+      </article>
+      <article class="card">
+        <h2>Generation Success</h2>
+        <div class="metric good">87.5%</div>
+        <div>7 of 8 generation cases scored as wins.</div>
+      </article>
+      <article class="card">
+        <h2>Negative Control</h2>
+        <div class="metric warn">1</div>
+        <div>The API docs control correctly scored as a loss for the skill.</div>
+      </article>
+      <article class="card">
+        <h2>High-Priority Regressions</h2>
+        <div class="metric good">0</div>
+        <div>No high-priority regression failures were recorded in this run.</div>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2>Score Table</h2>
+      <p class="section-intro">
+        The pattern is clear: the skill adds the most value on explainers that benefit from intuition-first structure,
+        stable examples, and visual thinking. It is a bad fit for terse API reference writing, which is exactly what we want.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Case</th>
+            <th>Mode</th>
+            <th>Baseline</th>
+            <th>Skill</th>
+            <th>Decision</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Cache invalidation</td><td>design_tradeoff</td><td>8</td><td>16</td><td><span class="decision decision-win">Win</span></td></tr>
+          <tr><td>Reference counting memory management</td><td>visual_walkthrough</td><td>9</td><td>16</td><td><span class="decision decision-win">Win</span></td></tr>
+          <tr><td>Base64 encoding</td><td>conversion_model</td><td>10</td><td>16</td><td><span class="decision decision-win">Win</span></td></tr>
+          <tr><td>Checksum vs cryptographic hash</td><td>toy_implementation</td><td>10</td><td>15</td><td><span class="decision decision-win">Win</span></td></tr>
+          <tr><td>Rate limiting</td><td>design_tradeoff</td><td>9</td><td>16</td><td><span class="decision decision-win">Win</span></td></tr>
+          <tr><td>B-tree indexing</td><td>visual_walkthrough</td><td>10</td><td>16</td><td><span class="decision decision-win">Win</span></td></tr>
+          <tr><td>Debounce vs throttle</td><td>boundary_concise</td><td>13</td><td>15</td><td><span class="decision decision-win">Win</span></td></tr>
+          <tr><td>API docs control</td><td>negative_fit_guard</td><td>15</td><td>8</td><td><span class="decision decision-loss">Loss</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Representative Output Comparisons</h2>
+      <p class="section-intro">
+        These examples show the actual behavior difference behind the numbers. The baseline tends to define and categorize.
+        The skill-assisted version tends to start with a human-scale scenario, stage the explanation, and make the reader see the system.
+      </p>
+
+      <div class="example">
+        <h3>1. Cache invalidation</h3>
+        <div class="compare-grid">
+          <div class="sample baseline">
+            <h4>Baseline</h4>
+            <p>Cache invalidation is the process of updating or removing stale entries from a cache when the source of truth changes. Common strategies include time-based expiration, write-through, cache-aside, and explicit invalidation. Each strategy trades consistency, latency, and implementation complexity differently.</p>
+          </div>
+          <div class="sample skill">
+            <h4>Skill-Assisted</h4>
+            <p>Imagine you run an online store. A product page is fast because its title, price, and inventory are cached. Then someone in the admin panel changes the price from $39 to $29. If the cache keeps serving the old version, your site is now fast and wrong, which is a bad combo. That tension is the whole cache invalidation problem.
+
+The easiest fix is to let cached data expire after a fixed amount of time. That works, until you notice the awkward window where the source of truth has changed but the cache has not. Now we have a real tradeoff to work through.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h3>2. Reference counting memory management</h3>
+        <div class="compare-grid">
+          <div class="sample baseline">
+            <h4>Baseline</h4>
+            <p>Reference counting associates a count with each allocated object. Every new reference increments the count and every removed reference decrements it. When the count reaches zero, the object can be reclaimed. This approach is simple to implement but does not handle cycles on its own.</p>
+          </div>
+          <div class="sample skill">
+            <h4>Skill-Assisted</h4>
+            <p>Think of each object as carrying a little sticky note with a number on it. That number tells us how many live references still point at the object. If the number is 3, three different places still care about it. If the number drops to 0, nobody is using it anymore, so we can clean it up.
+
+Start with one object named <span class="mono">UserProfile</span>. A variable points to it, so the count is 1. Pass that object into a cache, and the count becomes 2. Drop the original variable, and the count falls back to 1. Once the cache lets go too, the count reaches 0 and cleanup can happen.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h3>3. Base64 encoding</h3>
+        <div class="compare-grid">
+          <div class="sample baseline">
+            <h4>Baseline</h4>
+            <p>Base64 is an encoding scheme that converts binary data into a restricted text alphabet of 64 characters. It works by taking input bytes in groups of three, turning them into 24 bits, and then splitting those 24 bits into four 6-bit chunks. Each 6-bit chunk maps to one Base64 character.</p>
+          </div>
+          <div class="sample skill">
+            <h4>Skill-Assisted</h4>
+            <p>Base64 is what you reach for when you need to move raw bytes through a system that behaves better with plain text. The bytes are still the real payload. Base64 just repackages them into a safer-looking alphabet.
+
+The easiest way to picture it is this: take 3 bytes, line them up into one 24-bit strip, then cut that strip into 4 equal 6-bit pieces. Those 6-bit pieces are small enough to map cleanly into a 64-character alphabet. Once you see that repacking step, the rest of Base64 feels much less mysterious.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h3>4. Negative control: API docs</h3>
+        <div class="compare-grid">
+          <div class="sample baseline">
+            <h4>Baseline</h4>
+            <p><span class="mono">makeSignedUrl(url, options) -> string</span>
+Creates a signed URL with an expiration time and optional response overrides. Throws when the URL is invalid or signing credentials are missing.</p>
+          </div>
+          <div class="sample skill">
+            <h4>Skill-Assisted</h4>
+            <p>If you have ever needed to give someone temporary access to a file without exposing your storage credentials, <span class="mono">makeSignedUrl</span> is the helper that does the heavy lifting. It takes a URL plus signing options and returns a time-limited link.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Readout</h2>
+      <p class="section-intro">
+        The skill is doing what we want in the long-form cases. It improves openings, gives the article a stable teaching anchor,
+        creates more visual structure, and keeps the tone human without losing technical precision. The negative control also behaved well:
+        terse API documentation is still better without the skill.
+      </p>
+      <ul>
+        <li>Best gains appeared in tradeoff-heavy and walkthrough-heavy prompts.</li>
+        <li>The skill also helped on transformation topics like Base64, where the baseline usually gets too definition-heavy too quickly.</li>
+        <li>The smallest gain showed up on a compact explanation task, which is expected because the prompt leaves less room for the style to help.</li>
+        <li>No high-priority regressions were observed in this run.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
