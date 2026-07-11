@@ -32,6 +32,43 @@ The skill is providing value when:
 - correctness does not get worse
 - prohibited style regressions do not appear
 
+## Running Evals
+
+The default entry point is:
+
+```bash
+ruby evals/run_evals.rb run technical-casual
+```
+
+That command now always produces both of these files by default:
+
+- `evals/reports/technical-casual-YYYY-MM-DD.json`
+- `evals/reports/technical-casual-YYYY-MM-DD.html`
+
+The JSON file is the source of truth for the report data. The HTML file is the browser-ready rendered view of that same report.
+
+If you want to choose the filename base yourself, pass an output base or a JSON path:
+
+```bash
+ruby evals/run_evals.rb run technical-casual evals/reports/technical-casual-demo
+ruby evals/run_evals.rb run technical-casual evals/reports/technical-casual-demo.json
+```
+
+Both commands will create:
+
+- `evals/reports/technical-casual-demo.json`
+- `evals/reports/technical-casual-demo.html`
+
+You can still use the lower-level commands directly:
+
+```bash
+ruby evals/run_evals.rb scaffold technical-casual
+ruby evals/run_evals.rb validate evals/reports/technical-casual-YYYY-MM-DD.json
+ruby evals/run_evals.rb summarize evals/reports/technical-casual-YYYY-MM-DD.json
+```
+
+`summarize` now regenerates the HTML report automatically, so the browser view stays in sync with the JSON report.
+
 ## Folder Layout
 
 Each skill eval folder should contain:
@@ -44,6 +81,6 @@ Each skill eval folder should contain:
 
 The shared evals root may also contain:
 
-- `run_evals.rb`: a lightweight runner for scaffolding, validating, and summarizing reports
-- `report-format.md`: documentation for the JSON reporting format
-- `reports/`: generated report JSON files and Markdown summaries
+- `run_evals.rb`: a lightweight runner for scaffolding, validating, summarizing, and rendering reports
+- `report-format.md`: documentation for the JSON and HTML reporting flow
+- `reports/`: generated report artifacts

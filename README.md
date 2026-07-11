@@ -19,6 +19,25 @@ Each skill should typically include:
 - `SKILL.md`: the main instructions for the agent
 - supporting references, examples, or notes as needed
 
+The repo also includes:
+
+- `evals/`: evaluation suites, a lightweight runner, and browser-ready report artifacts
+
+## Running Evals
+
+The default eval command is:
+
+```bash
+ruby evals/run_evals.rb run technical-casual
+```
+
+That creates both of these files by default:
+
+- `evals/reports/technical-casual-YYYY-MM-DD.json`
+- `evals/reports/technical-casual-YYYY-MM-DD.html`
+
+The JSON file is the source of truth. The HTML file is the rendered report you can open directly in a browser.
+
 ## Direction
 
 Humanish is for writing that sounds like a person with taste, judgment, and a point of view.

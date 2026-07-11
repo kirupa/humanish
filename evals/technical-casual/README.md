@@ -28,6 +28,19 @@ We want to know:
 
 ## How To Use This Suite
 
+The easiest way to start is:
+
+```bash
+ruby evals/run_evals.rb run technical-casual
+```
+
+That command always creates both:
+
+- `evals/reports/technical-casual-YYYY-MM-DD.json`
+- `evals/reports/technical-casual-YYYY-MM-DD.html`
+
+The JSON file is the editable report data. The HTML file is the rendered browser view of the same report.
+
 For each generation eval:
 
 1. Generate a baseline response without the skill.
@@ -35,18 +48,14 @@ For each generation eval:
 3. Score both responses using `rubric.md`.
 4. Record whether the skill materially improved the result.
 
-If you want a prebuilt report shell, run:
-
-```bash
-ruby evals/run_evals.rb scaffold technical-casual
-```
-
 After scoring the results, validate and summarize with:
 
 ```bash
 ruby evals/run_evals.rb validate evals/reports/technical-casual-YYYY-MM-DD.json
 ruby evals/run_evals.rb summarize evals/reports/technical-casual-YYYY-MM-DD.json
 ```
+
+`summarize` recalculates the summary fields and refreshes the HTML output automatically.
 
 ## What Counts As Value
 

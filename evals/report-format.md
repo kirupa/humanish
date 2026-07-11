@@ -1,16 +1,32 @@
 # Report Format
 
-The eval runner uses a JSON report file as the source of truth.
+The eval runner uses a JSON report file as the source of truth and generates a matching HTML report for browser viewing.
 
 ## Workflow
 
-1. Scaffold a report:
+1. Run the suite:
 
 ```bash
-ruby evals/run_evals.rb scaffold technical-casual
+ruby evals/run_evals.rb run technical-casual
 ```
 
-2. Fill in the report by hand or with a separate automation step:
+By default, this creates:
+
+- `evals/reports/technical-casual-YYYY-MM-DD.json`
+- `evals/reports/technical-casual-YYYY-MM-DD.html`
+
+You can also provide your own output base:
+
+```bash
+ruby evals/run_evals.rb run technical-casual evals/reports/technical-casual-demo
+```
+
+That creates:
+
+- `evals/reports/technical-casual-demo.json`
+- `evals/reports/technical-casual-demo.html`
+
+2. Fill in the JSON report by hand or with a separate automation step:
 
 - mark trigger outcomes
 - score baseline and skill-assisted outputs
@@ -29,11 +45,21 @@ ruby evals/run_evals.rb validate evals/reports/technical-casual-YYYY-MM-DD.json
 ruby evals/run_evals.rb summarize evals/reports/technical-casual-YYYY-MM-DD.json
 ```
 
-Optionally write a Markdown scorecard:
+This updates the JSON summary fields and regenerates the matching HTML report.
+
+Optionally write a Markdown scorecard too:
 
 ```bash
 ruby evals/run_evals.rb summarize evals/reports/technical-casual-YYYY-MM-DD.json evals/reports/technical-casual-YYYY-MM-DD.md
 ```
+
+If you want to use the lower-level scaffold step directly, it also writes both artifacts:
+
+```bash
+ruby evals/run_evals.rb scaffold technical-casual
+```
+
+That command creates a draft JSON report and a matching draft HTML view.
 
 ## JSON Shape
 
@@ -116,3 +142,13 @@ The runner computes:
 You can still add notes in:
 
 - `summary.overall_notes`
+
+## HTML Output
+
+The generated HTML report is intended to be committed when it is useful as a readable artifact or demo.
+
+It should:
+
+- mirror the JSON report content
+- render cleanly in a browser without extra tooling
+- stay in sync whenever `run` or `summarize` is used
