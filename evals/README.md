@@ -41,3 +41,9 @@ Each skill eval folder should contain:
 - `trigger-evals.yaml`: prompts that should and should not trigger the skill
 - `generation-evals.yaml`: prompts for A/B comparison
 - `regression-checks.yaml`: high-priority constraints and failure modes
+
+The shared evals root may also contain:
+
+- `run_evals.rb`: a lightweight runner for scaffolding, validating, and summarizing reports
+- `report-format.md`: documentation for the JSON reporting format
+- `reports/`: generated report JSON files and Markdown summaries

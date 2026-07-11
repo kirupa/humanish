@@ -35,6 +35,19 @@ For each generation eval:
 3. Score both responses using `rubric.md`.
 4. Record whether the skill materially improved the result.
 
+If you want a prebuilt report shell, run:
+
+```bash
+ruby evals/run_evals.rb scaffold technical-casual
+```
+
+After scoring the results, validate and summarize with:
+
+```bash
+ruby evals/run_evals.rb validate evals/reports/technical-casual-YYYY-MM-DD.json
+ruby evals/run_evals.rb summarize evals/reports/technical-casual-YYYY-MM-DD.json
+```
+
 ## What Counts As Value
 
 The skill is providing value when it improves:
