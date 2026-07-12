@@ -126,3 +126,101 @@ cases:
       - tutorial framing
       - unnecessary metaphors
       - double dashes
+
+  - id: tc_gen_009
+    mode: visual_walkthrough
+    title: Rear differential
+    prompt: |
+      Explain what a car's rear differential does for a curious reader who understands cars at a basic level but has never looked inside one.
+      Keep it visual, intuitive, and grounded in a turning example.
+    should_demonstrate:
+      - opens with the practical problem of wheels needing to rotate at different speeds in a turn
+      - uses a stable driving or axle-based mental model
+      - walks through straight-line motion and turning motion in stages
+      - explains the gear behavior without drowning the reader in part names too early
+      - suggests diagrams or clearly frames what the reader should picture
+    should_avoid:
+      - defaulting to software metaphors
+      - unexplained mechanical jargon in the opening
+      - double dashes
+
+  - id: tc_gen_010
+    mode: conversion_model
+    title: Standard deviation intuition
+    prompt: |
+      Write a technical but approachable explainer for standard deviation.
+      Use a small numeric example and help the reader build a feel for what the number is trying to say.
+    should_demonstrate:
+      - starts with a familiar data comparison
+      - uses a repeatable calculation model without becoming textbook-like
+      - translates the math back into an intuitive statement about spread
+      - keeps one stable example through most of the explanation
+      - uses visual staging or diagram suggestions where helpful
+    should_avoid:
+      - symbol-heavy opening
+      - sounding like lecture notes
+      - double dashes
+
+  - id: tc_gen_011
+    mode: visual_walkthrough
+    title: Three-phase AC power
+    prompt: |
+      Explain how three-phase AC power works for an apprentice electrician.
+      Build intuition first, then connect it back to why motors and industrial equipment like it so much.
+    should_demonstrate:
+      - starts with a practical reason to care
+      - uses waves, timing offsets, or rotating fields as the visual anchor
+      - walks through the phase relationship in a clear sequence
+      - explains the practical payoff for motors or power delivery
+      - keeps the tone grounded and conversational
+    should_avoid:
+      - collapsing into formal EE textbook language immediately
+      - software analogies that distract from the electrical concept
+      - double dashes
+
+  - id: tc_gen_012
+    mode: design_tradeoff
+    title: Injection molding defects
+    prompt: |
+      Create an explainer on how injection molding works and why defects like sink marks, warping, or short shots happen.
+      Make it useful for a technically curious manufacturing reader.
+    should_demonstrate:
+      - opens with the manufacturing goal and why defects are expensive
+      - uses the molding cycle as a stable teaching anchor
+      - connects specific defects to process tradeoffs like cooling, pressure, or geometry
+      - explains the mechanism in clear stages rather than as a flat glossary
+      - suggests diagrams or explicitly frames what is happening inside the mold
+    should_avoid:
+      - defaulting to software-centered framing
+      - flat list of defect definitions only
+      - double dashes
+
+  - id: tc_gen_013
+    mode: design_tradeoff
+    title: Heat pump heating
+    prompt: |
+      Explain how a heat pump can warm a house even when it is cold outside.
+      Make it technically correct, intuitive, and a little playful without sounding fluffy.
+    should_demonstrate:
+      - starts with the apparent contradiction that makes the topic interesting
+      - uses heat movement as a stable mental model
+      - explains the cycle through clear stages such as evaporation, compression, and heat release
+      - connects the mechanism to real-world efficiency or climate tradeoffs
+      - preserves accuracy while keeping the tone light
+    should_avoid:
+      - vague magic-sounding language
+      - skipping the physical mechanism
+      - double dashes
+
+  - id: tc_gen_014
+    mode: negative_fit_guard
+    title: History negative control
+    prompt: |
+      Write a short essay about how the telegraph changed business and politics in the nineteenth century.
+    expected_outcome:
+      - baseline should likely beat the skill-assisted version
+      - if the skill is forced on, it should score poorly on trigger fit and structure fit
+    should_avoid:
+      - forcing a mechanism walkthrough where the task is really historical interpretation
+      - casual tutorial framing
+      - double dashes

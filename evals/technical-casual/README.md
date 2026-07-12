@@ -2,13 +2,17 @@
 
 This suite evaluates whether the `technical-casual` skill actually improves technical writing in the ways it promises.
 
+The suite is intentionally broad. It covers both computer topics and non-computer technical topics so we can verify that the skill generalizes across technical domains instead of quietly collapsing back into developer-only writing.
+
 ## What We Are Testing
 
 We want to know:
 
 - does the skill trigger for the right prompts?
 - does it improve explainers that benefit from intuition-first teaching?
+- does it work well outside software topics, including engineering, math, electrical systems, manufacturing, and physics-flavored explainers?
 - does it avoid over-applying itself to docs, release notes, or formal writing?
+- does it stay out of softer subjects like history and philosophy where the format is a poor fit?
 - does it preserve important style constraints such as avoiding double dashes?
 
 ## Suite Structure
@@ -19,6 +23,7 @@ We want to know:
 - `generation-evals.yaml`
   A set of prompts across the major article modes described by the skill:
   design-tradeoff, walkthrough, conversion/model, and toy-implementation.
+  The suite includes software, mechanical, electrical, mathematical, thermal, and manufacturing examples, plus negative controls.
 
 - `regression-checks.yaml`
   Checks for important style rules and failure modes.
@@ -57,6 +62,23 @@ ruby evals/run_evals.rb summarize evals/reports/technical-casual-YYYY-MM-DD.json
 
 `summarize` recalculates the summary fields and refreshes the HTML output automatically.
 
+## Coverage Map
+
+Representative domains currently covered:
+
+- software and computing
+- mechanical systems
+- electrical systems
+- math and statistics
+- manufacturing processes
+- physical systems and energy transfer
+
+Representative non-fit boundaries currently covered:
+
+- history prompts
+- philosophy prompts
+- checklist and reference-style writing
+
 ## What Counts As Value
 
 The skill is providing value when it improves:
@@ -73,4 +95,5 @@ without introducing:
 - over-stylized fluff
 - broken technical precision
 - double dashes
+- software-default framing on non-computer topics
 - forced metaphors or forced tradeoff sections

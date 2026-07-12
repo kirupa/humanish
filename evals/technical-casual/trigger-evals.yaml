@@ -41,6 +41,44 @@ cases:
       - engineering tradeoffs
       - concept is abstract but teachable through examples
 
+  - id: tc_trigger_009
+    should_trigger: true
+    title: Rear differential explainer
+    prompt: |
+      Explain what a car's rear differential does in a visual, beginner-friendly way.
+      Use a concrete driving example and keep the tone relaxed.
+    rationale:
+      - mechanical system with inspectable moving parts
+      - the topic benefits from a step-by-step visual explanation
+
+  - id: tc_trigger_010
+    should_trigger: true
+    title: Three-phase power walkthrough
+    prompt: |
+      Write a clear explainer on how three-phase AC power works for a curious apprentice electrician.
+      Build intuition before jargon and use practical examples.
+    rationale:
+      - electrical concept with evolving state
+      - asks for intuition-first teaching explicitly
+
+  - id: tc_trigger_011
+    should_trigger: true
+    title: Standard deviation intuition guide
+    prompt: |
+      Teach standard deviation to a technical audience using a concrete example and an informal tone.
+    rationale:
+      - math topic that benefits from a stable teaching anchor
+      - the requested tone and structure match the skill
+
+  - id: tc_trigger_012
+    should_trigger: true
+    title: Injection molding process explainer
+    prompt: |
+      Create a visual article explaining how injection molding works and why defects like sink marks happen.
+    rationale:
+      - manufacturing process with clear stages
+      - a visual walkthrough is a natural fit
+
   - id: tc_trigger_005
     should_trigger: false
     title: API reference request
@@ -76,3 +114,30 @@ cases:
     rationale:
       - concise summary task
       - no room for the skill's full structure
+
+  - id: tc_trigger_013
+    should_trigger: false
+    title: Steam engine history essay
+    prompt: |
+      Write a short essay about how the steam engine changed society during the Industrial Revolution.
+    rationale:
+      - history topic
+      - interpretation and context matter more than mechanism
+
+  - id: tc_trigger_014
+    should_trigger: false
+    title: Philosophy of mathematics prompt
+    prompt: |
+      Write a reflective essay on whether mathematical truths are discovered or invented.
+    rationale:
+      - philosophy topic
+      - not an inspectable technical mechanism explainer
+
+  - id: tc_trigger_015
+    should_trigger: false
+    title: Manufacturing SOP checklist
+    prompt: |
+      Draft a step-by-step standard operating procedure checklist for starting up an injection molding machine.
+    rationale:
+      - operational checklist, not a teaching-style explainer
+      - precision and brevity matter more than the skill's narrative structure

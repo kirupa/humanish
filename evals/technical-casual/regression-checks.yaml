@@ -59,3 +59,12 @@ checks:
     failure_signals:
       - oversimplification creates a false mental model
       - critical dependencies or caveats are omitted
+
+  - id: tc_reg_008
+    name: domain_native_framing
+    priority: high
+    description: Non-computer topics should stay grounded in their own domain instead of being dragged back into software examples or developer language.
+    failure_signals:
+      - a mechanical, electrical, math, or manufacturing prompt gets reframed around apps, APIs, or backend systems
+      - software metaphors replace clearer domain-native examples
+      - the explanation sounds like a coder talking about code instead of the requested subject
