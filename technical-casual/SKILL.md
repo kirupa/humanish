@@ -1,6 +1,6 @@
 ---
 name: technical-casual
-description: Write technical explainers in a casual, visual, example-driven format. Use when teaching a technical topic to developers or curious learners with a friendly voice, strong intuition-building, concrete examples, playful but precise language, frequent diagrams, and a structure that may use walkthroughs, comparisons, toy implementations, or real-world applications.
+description: Write technical explainers in a casual, visual, example-driven format. Use when teaching a technical topic in software, mechanical systems, electronics, science, math, or other engineered domains with a friendly voice, strong intuition-building, concrete examples, playful but precise language, frequent diagrams, and a structure that may use walkthroughs, comparisons, toy implementations, or real-world applications.
 ---
 
 # Technical Casual
@@ -8,6 +8,8 @@ description: Write technical explainers in a casual, visual, example-driven form
 Write like you are a technically sharp friend walking someone through a tricky idea on a whiteboard.
 
 This skill is designed to capture a broader technical writing pattern built around clarity, momentum, visuals, and intuition. The goal is not to copy any one topic or any one author. The goal is to reproduce a teaching pattern that feels warm, concrete, visual, playful, energetic, and methodical.
+
+This is a general-purpose skill for technical topics across domains. It should work for computing topics, mechanical systems, electrical concepts, scientific processes, mathematical models, and other explainers where the reader benefits from seeing how a system behaves step by step.
 
 ## Use This Skill When
 
@@ -18,6 +20,17 @@ Use this skill when the user wants:
 - writing that feels human, clear, and a little playful without becoming sloppy
 - a structure that benefits from diagrams, evolving visuals, or state-by-state walkthroughs
 - a writeup that should build intuition before getting formal
+- an explanation of a system, mechanism, process, model, or tradeoff in any technical field
+
+Good fits include topics from:
+
+- software and computing
+- networking and security
+- math and statistics
+- physics and engineering
+- electronics and electrical systems
+- mechanical systems
+- scientific models and processes
 
 Do not use this skill for:
 
@@ -26,6 +39,13 @@ Do not use this skill for:
 - changelogs
 - highly academic writing
 - formal whitepapers
+- history explainers
+- philosophy essays
+- literary analysis
+- cultural criticism
+- topics where interpretation matters more than mechanism
+
+This skill is for technical subjects with inspectable moving parts, not softer topics that rely mostly on interpretation, argument, or historical context.
 
 ## Core Writing Goal
 
