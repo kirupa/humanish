@@ -158,6 +158,8 @@ Common personality markers in this style:
 - slightly goofy phrasing that still preserves clarity
 - a short rhetorical flourish before a walkthrough or payoff
 
+When revising or ghost-writing for a specific author, preserve their existing tics: pet phrases, casual hedges like "sorta," signature sign-offs, emoji habits. Casual should sound like that particular person being casual, not like generic-casual. Sanding the voice down to neutral is a regression even when each individual edit looks like a cleanup.
+
 ### Jargon Handling
 
 Introduce jargon only after the reader has already felt the idea in plain English.
@@ -300,6 +302,8 @@ Examples of good containers:
 
 Stay with this anchor for most of the core explanation. Do not keep switching metaphors unless the article explicitly pivots to a more formal representation later.
 
+If the running example involves recurring actors, give them human names instead of labels. "Lisa checks her work, Ralph does not" beats "washer one" and "washer two." Names are easier to remember, and they become reusable shorthand later in the piece ("a Ralph-like AI") that compresses a whole paragraph of re-explanation into two words.
+
 ### 3. Freeze the Initial State
 
 Before explaining the concept, establish a clean starting point.
@@ -313,6 +317,8 @@ Show:
 Then create one specific change that will stress the system.
 
 This gives the article a plot.
+
+If the system has multiple possible outcomes that the article will lean on later (success, self-correction, giving up and escalating), list all of them the first time the behavior is described. A reader who saw the escalation path in a bullet up front will nod when a whole section about it arrives later. A branch that first appears halfway through feels bolted on.
 
 ### 4. Ask the Reader to Think First
 
@@ -441,6 +447,9 @@ Optional finishers in this style include:
 - a quick implementation pointer
 - a broadened comparison to related tools
 - a final joke, game reference, or unrelated callback image
+- a pointer to a planned follow-up piece
+
+Deferring depth to a follow-up is a legitimate scoping move, not a cop-out. It is better to explain the concept well and promise the hands-on build next time than to cram both into one piece. If depth is deferred, say so explicitly in the opening and close with the forward pointer, so the cut reads as a plan rather than a gap.
 
 ## Visual Teaching Rules
 
@@ -638,6 +647,10 @@ This is especially useful for:
 - data compression
 - caching
 
+### Pick Surprising Ancestors
+
+When claiming an idea is not new, do not stop at the two examples everyone reaches for. Add at least one physical, historical, or mechanical instance of the same principle: the steam engine governor next to the thermostat, the water clock next to the timer. Old mechanisms are inherently visual, they prove the idea predates computers, and readers remember the surprising example long after the familiar ones fade.
+
 ### Preserve Technical Correctness
 
 The voice is relaxed, but the content should not get mushy.
@@ -651,6 +664,8 @@ Be precise about:
 - where the optimization actually comes from
 
 If simplification would create a false mental model, add one sentence that sharpens the edge.
+
+Watch for mid-article summaries that promise more than later sections allow. A recap that says the process "improves with every iteration" contradicts a later section about diminishing returns and budgets. Before finalizing, check each summary paragraph against the caveats that come after it, and tone the summary down rather than cutting the caveat.
 
 ## Formatting Moves
 
@@ -757,6 +772,9 @@ Before delivering, verify:
 - jargon appears after intuition, not before
 - the conclusion reconnects to the main mental model
 - the tone has some personality without turning into a bit
+- recurring actors in the running example have names, not labels
+- every branch the article depends on later is planted at first mention
+- no summary paragraph promises more than a later caveat allows
 
 ## Litmus Test
 
