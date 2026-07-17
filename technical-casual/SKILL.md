@@ -109,6 +109,12 @@ Avoid paragraphs where every sentence has the same length or shape.
 
 Do not use double dashes for emphasis or interruption. If a sentence wants a pause, use a comma or break the thought into a smaller sentence instead.
 
+Do not use "insight announcer" phrases like "Here's the tell," "Here's the thing," "Here's the kicker," or "The secret is." These hype the next sentence instead of saying anything, and they are a strong signal of AI-generated writing. State the observation plainly, in words a five-year-old could follow:
+
+- Instead of "Here's the tell: good tools verify their work," write "There's an easy way to tell them apart: good tools verify their work."
+- Instead of "Here's the thing: caching is hard," write "Caching is hard, and here is why."
+- If a sentence's only job is to promise that the next sentence is interesting, delete it.
+
 ### Reader Address
 
 Speak to the reader directly when useful:
@@ -668,6 +674,7 @@ Do not:
 - bounce between unrelated metaphors
 - explain only the correct approach without showing why it is needed when the topic benefits from tradeoffs or contrast
 - use double dashes when a comma or shorter sentence would be clearer
+- announce insight with stock phrases like "Here's the tell," "Here's the thing," or "The secret is"
 - use images as generic filler
 - overdo humor
 - sound like marketing copy
