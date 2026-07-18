@@ -519,7 +519,7 @@ Favor visuals that are:
 
 Avoid visuals that are:
 
-- decorative only
+- decorative only, outside the gag images described below
 - overly realistic
 - crowded
 - unlabeled when labels would help
@@ -541,15 +541,40 @@ Use these moves often:
 
 ### Humor Images
 
-One occasional gag image is acceptable after a dense stretch.
+Not every visual teaches. A small number exist purely for pacing, and they are
+part of the format rather than a lapse from it. Their job is to give the reader
+somewhere to exhale.
 
-Use it sparingly. It should:
+A gag image should:
 
-- release tension
-- reinforce the topic loosely
-- not derail the article
+- release tension after a dense stretch
+- hang loosely off the topic's own vocabulary
+- cost the reader nothing if they skip it
 
-One small visual joke is enough.
+Placement matters more than the joke. Put gag images at seams:
+
+- after a payoff the reader just earned
+- between two major sections
+- after a run of mechanical detail
+
+Never put one inside a step sequence. If the reader is tracking state across
+frames, a joke image breaks the chain and they have to re-enter the sequence
+cold.
+
+Frequency is roughly one gag per eight to ten explanatory visuals. A long
+article might carry two or three. At that ratio the joke reads as punctuation.
+Past it, it reads as a tic, and the explanatory visuals start losing authority
+by association.
+
+Two shapes that work:
+
+- a pun on a term the article already uses heavily, cashed in once the term is
+  familiar
+- a reaction image placed on a conclusion, never on a step
+
+Test: delete the image. If the explanation is now incomplete, it was never a
+gag image and it belongs in the explanatory sequence. If nothing is lost except
+the breather, it is doing its job.
 
 ### If You Cannot Generate Images
 
