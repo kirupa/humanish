@@ -676,6 +676,22 @@ This is especially useful for:
 
 When claiming an idea is not new, do not stop at the two examples everyone reaches for. Add at least one physical, historical, or mechanical instance of the same principle: the steam engine governor next to the thermostat, the water clock next to the timer. Old mechanisms are inherently visual, they prove the idea predates computers, and readers remember the surprising example long after the familiar ones fade.
 
+### Separate the Reader's View from the System's View
+
+Diagrams in this format are omniscient. They show the whole graph, the whole network, the whole state at once. The system being explained almost never has that view. An algorithm knows the node it is standing on, not the map. A router knows its own links, not the internet. A cache cannot see the requests that have not arrived yet.
+
+Readers who conflate their view with the system's view build the wrong mental model, and it surfaces later as a confused question: "why doesn't it just take the obviously better path?" The answer, that the system cannot see what the reader can see, is worth teaching on purpose rather than leaving implicit.
+
+Do this in three places:
+
+1. When the first full-picture diagram appears, say plainly that the bird's-eye view is a luxury for the reader and the system never gets it.
+2. Before the walkthrough begins, state exactly what the system knows at any moment. Usually that is its current position, its immediate surroundings, and whatever notes it has accumulated. Everything else is fog.
+3. During the walkthrough, narrate discovery moments. When something enters the system's field of view for the first time, say so: "a moment ago, the algorithm did not know D existed."
+
+Reinforce it once more at the payoff or in the recap: the strategy worked while being nearsighted the whole time.
+
+Keep these reminders in the connective prose between steps, not inside the step sequences themselves, so the reader's state tracking stays clean.
+
 ### Preserve Technical Correctness
 
 The voice is relaxed, but the content should not get mushy.
@@ -800,6 +816,7 @@ Before delivering, verify:
 - recurring actors in the running example have names, not labels
 - every branch the article depends on later is planted at first mention
 - no summary paragraph promises more than a later caveat allows
+- walkthroughs distinguish what the reader can see from what the system can see
 
 ## Litmus Test
 
