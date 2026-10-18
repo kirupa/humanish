@@ -8,7 +8,7 @@ by PHP with nothing installed on the host but PHP itself.
 **Status:** Living document, kept in step with the macOS PRD.
 **Requires:** PHP 8.1 or newer, and a browser released in the last two years.
 **Dependencies:** none. No Composer, no npm, no bundler, no build step.
-**Repository:** <https://github.com/kirupa/markdown-editor>
+**Repository:** <https://github.com/kirupa/humanish>
 
 > **Maintenance rule:** every change that adds, removes, or alters a
 > user-visible capability must update the matching requirement here, add a line
@@ -917,8 +917,8 @@ Web/
 ### Local preview
 
 ```bash
-git clone https://github.com/kirupa/markdown-editor.git
-cd markdown-editor
+git clone https://github.com/kirupa/humanish.git
+cd humanish
 Web/serve.sh
 ```
 

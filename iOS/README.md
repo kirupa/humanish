@@ -7,7 +7,7 @@ Swift source** with the [macOS build](../macOS/README.md).
 **Status:** Living document.
 **Bundle identifier:** `com.kirupa.markdown-editor`
 **Platform:** iOS 17.0 or newer, iPhone and iPad (`TARGETED_DEVICE_FAMILY = 1,2`)
-**Repository:** <https://github.com/kirupa/markdown-editor>
+**Repository:** <https://github.com/kirupa/humanish>
 
 > **Maintenance rule:** every change that adds, removes, or alters a
 > user-visible capability must update the matching requirement here in the same
@@ -246,8 +246,8 @@ iOS/Sources/MarkdownEditorIOS/     UIKit + SwiftUI, iOS only
 ### 9.1 With Xcode (recommended)
 
 ```bash
-git clone https://github.com/kirupa/markdown-editor.git
-open markdown-editor/iOS/MarkdownEditor.xcodeproj
+git clone https://github.com/kirupa/humanish.git
+open humanish/iOS/MarkdownEditor.xcodeproj
 ```
 
 Pick an iPhone or iPad simulator and press **⌘R**. The project references
@@ -258,7 +258,7 @@ Signing & Capabilities.
 ### 9.2 Without Xcode
 
 ```bash
-cd markdown-editor/iOS
+cd humanish/iOS
 ./Scripts/build-app.sh
 ```
 

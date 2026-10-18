@@ -11,7 +11,7 @@ document is the specification all three are held to.
 app supports as of the current `main`.
 **Bundle identifier:** `com.kirupa.markdown-editor`
 **Platform:** macOS 13.0 or newer
-**Repository:** <https://github.com/kirupa/markdown-editor>
+**Repository:** <https://github.com/kirupa/humanish>
 
 > **Maintenance rule:** this PRD is the canonical description of the product.
 > Every change that adds, removes, or alters a user-visible capability must
@@ -1294,8 +1294,8 @@ Requires macOS 13 or newer and a current Apple Swift toolchain. A full Xcode
 installation is not required, but the Command Line Tools must be installed.
 
 ```bash
-git clone https://github.com/kirupa/markdown-editor.git
-cd markdown-editor/macOS
+git clone https://github.com/kirupa/humanish.git
+cd humanish/macOS
 make install
 ```
 
