@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A10000000000000000000400"
-               BuildableName = "Markdown Editor.app"
+               BuildableName = "Humanish.app"
                BlueprintName = "MarkdownEditor"
                ReferencedContainer = "container:MarkdownEditor.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A10000000000000000000400"
-            BuildableName = "Markdown Editor.app"
+            BuildableName = "Humanish.app"
             BlueprintName = "MarkdownEditor"
             ReferencedContainer = "container:MarkdownEditor.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A10000000000000000000400"
-            BuildableName = "Markdown Editor.app"
+            BuildableName = "Humanish.app"
             BlueprintName = "MarkdownEditor"
             ReferencedContainer = "container:MarkdownEditor.xcodeproj">
          </BuildableReference>

@@ -1,8 +1,8 @@
-# Markdown Editor for iOS — Product Requirements Document
+# Humanish for iOS — Product Requirements Document
 
-A native iPhone and iPad Markdown editor built with SwiftUI and UIKit, sharing
-its Markdown engine, formatting commands, and palettes as **compiled Swift
-source** with the [macOS build](../macOS/README.md).
+A clean native iPhone and iPad writing space built with SwiftUI and UIKit,
+sharing its Markdown engine, formatting commands, and palettes as **compiled
+Swift source** with the [macOS build](../macOS/README.md).
 
 **Status:** Living document.
 **Bundle identifier:** `com.kirupa.markdown-editor`
@@ -262,7 +262,7 @@ cd markdown-editor/iOS
 ./Scripts/build-app.sh
 ```
 
-Produces an ad-hoc-signed `build/Markdown Editor.app` for the iOS Simulator.
+Produces an ad-hoc-signed `build/Humanish.app` for the iOS Simulator.
 
 This path exists because `xcodebuild` and `simctl` refuse to run until Xcode's
 licence has been accepted — which needs an administrator password — while
@@ -293,7 +293,7 @@ on the no-Xcode path.
 Install and launch it with:
 
 ```bash
-xcrun simctl install booted "build/Markdown Editor.app"
+xcrun simctl install booted "build/Humanish.app"
 xcrun simctl launch booted com.kirupa.markdown-editor
 ```
 
@@ -347,6 +347,7 @@ output. See `macOS/README.md` §16.2 for what each kind of test is for and
 
 | Change | Summary |
 | --- | --- |
+| Humanish | The app is named **Humanish** across all builds (`CFBundleDisplayName`, `CFBundleName`, and `build/Humanish.app`), keeping `com.kirupa.markdown-editor` as its bundle identifier so documents and preferences carry over unchanged. |
 | The kirupa mark | The app icon is the kirupa logo on white, generated from `../macOS/Packaging/Logo.svg` by the same script as the Mac and web icons. It is drawn at 0.51 of the square, a little tighter than on the Mac because iOS rounds the artwork itself, and centred by the logo's round body rather than its bounding box, so the orange sits in the middle and the leaves hang off one corner ([ID-32, ID-67 and ID-68](#7-themes)). |
 | Formatting that leaves code alone | The bar's inline styles and link button do nothing inside a fenced block or a code span, where bold could only write asterisks into the code, and **grey out** while the caret is there. A block quote is prose and formats as before. The bar reads only the blocks at the selection's ends, so no layout pass renders the document ([ID-65 and ID-66](#5-formatting)). |
 | Render a block at a time, not the document | A keystroke re-parsed the whole document, styled the whole document, and assigned the result to `attributedText`, which throws away every glyph UIKit has laid out — so the longer the file, the slower it was to write in. Both panes now re-render only the block the edit landed in and splice it into the text storage: the rendered pane through the shared `MarkdownIncrementalRenderer`, the source pane by re-applying attributes over the enclosing block without touching its characters. Measured on the Mac, where the same shared engine runs: a keystroke in a 3.3 MB document went from about **14,000 ms** to **0.29 ms**, and two hundred keystrokes grew the process by about 3 MB where five used to grow it by over 110 MB. Incremental output is checked to be identical to a full render, offset for offset. See `macOS/README.md` §9.6.1. |

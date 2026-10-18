@@ -91,7 +91,7 @@ export function showError(error) {
     buttons.className = 'me-alert__buttons';
     buttons.append(button('OK', 'me-button--default', () => close(null)));
 
-    alert.append(heading('Markdown Editor'), paragraph(message, 'me-alert__message'));
+    alert.append(heading('Humanish'), paragraph(message, 'me-alert__message'));
     if (recovery) alert.append(paragraph(recovery, 'me-alert__recovery'));
     alert.append(buttons);
   });
@@ -100,7 +100,7 @@ export function showError(error) {
 /**
  * States something that is not a failure.
  *
- * `showError` puts "Markdown Editor" at the top and treats its second string
+ * `showError` puts "Humanish" at the top and treats its second string
  * as a recovery suggestion, which is exactly wrong for a panel reporting what
  * is configured -- it would read as though the configuration were the problem.
  */

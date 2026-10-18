@@ -33,7 +33,7 @@ struct MarkdownEditorApp: App {
     var body: some Scene {
         DocumentWindows()
 
-        // The standard place: KONVO ▸ Settings, ⌘,. A reader looking for a
+        // The standard place: Humanish ▸ Settings, ⌘,. A reader looking for a
         // preference looks there before anywhere else.
         Settings {
             CritiqueSettingsView()

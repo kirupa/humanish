@@ -1,12 +1,13 @@
-# KONVO
+# Humanish
 
-A Markdown editor that treats the source file as the document, built for the
-Mac, for iPhone and iPad, and for the browser.
+A clean space to write documents that AI helps review, built for the Mac, for
+iPhone and iPad, and for the browser (<https://www.kirupa.com/humanish/>).
 
-All three edit the *same* Markdown the same way. Rendering is an editable
-projection of the source, not a replacement for it — so text you didn't touch
-comes back byte for byte, and a folder written by one build opens in the others
-with every image still resolving.
+All three keep Markdown as the canonical document underneath, and edit it the
+*same* way. Rendering is an editable projection of the source, not a
+replacement for it — so text you didn't touch comes back byte for byte, and a
+folder written by one build opens in the others with every image still
+resolving.
 
 | | [macOS](macOS/) | [iOS](iOS/) | [Web](Web/) |
 | --- | --- | --- | --- |

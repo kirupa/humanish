@@ -16,7 +16,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Markdown Editor — keystroke cost</title>
+<title>Humanish — keystroke cost</title>
 <link rel="stylesheet" href="../css/themes.css">
 <link rel="stylesheet" href="../css/app.css">
 <style>

@@ -14,10 +14,10 @@ import MarkdownEditorCore
 enum CritiqueHistoryStore {
     private static let folderName = "Critiques"
 
-    /// The app used to be called Markdown Editor, and its critiques were
-    /// filed under that name.
-    private static let previousAppFolder = "Markdown Editor"
-    private static let appFolder = "KONVO"
+    /// The app used to be called KONVO, and before that Markdown Editor, and
+    /// its critiques were filed under those names.
+    private static let previousAppFolders = ["KONVO", "Markdown Editor"]
+    private static let appFolder = "Humanish"
 
     private static var directory: URL? {
         let base = FileManager.default.urls(
@@ -46,15 +46,18 @@ enum CritiqueHistoryStore {
     ) {
         let manager = FileManager.default
         guard !manager.fileExists(atPath: current.path) else { return }
-        let previous = base
-            .appendingPathComponent(previousAppFolder, isDirectory: true)
-            .appendingPathComponent(folderName, isDirectory: true)
-        guard manager.fileExists(atPath: previous.path) else { return }
-        try? manager.createDirectory(
-            at: current.deletingLastPathComponent(),
-            withIntermediateDirectories: true
-        )
-        try? manager.moveItem(at: previous, to: current)
+        for folder in previousAppFolders {
+            let previous = base
+                .appendingPathComponent(folder, isDirectory: true)
+                .appendingPathComponent(folderName, isDirectory: true)
+            guard manager.fileExists(atPath: previous.path) else { continue }
+            try? manager.createDirectory(
+                at: current.deletingLastPathComponent(),
+                withIntermediateDirectories: true
+            )
+            try? manager.moveItem(at: previous, to: current)
+            return
+        }
     }
 
     /// One file per document, named by a digest of its path.

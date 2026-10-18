@@ -36,7 +36,7 @@ export function buildMenus(root, commands, state) {
 
   const title = document.createElement('span');
   title.className = 'me-menubar__title';
-  title.textContent = 'Markdown Editor';
+  title.textContent = 'Humanish';
 
   function closeAll() {
     for (const menu of menus) {

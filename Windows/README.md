@@ -162,7 +162,7 @@ suite that runs in a third of a second and one that needs a UI.
   output to `macOS/Scripts/make-icons.swift` rather than drawing the kirupa mark
   again: it already writes the Mac `.icns`, the iOS PNG and the web `icon.svg`
   from `macOS/Packaging/Logo.svg`, placing the mark by its round body rather
-  than its bounding box. The landing screen is that icon and the word KONVO —
+  than its bounding box. The landing screen is that icon and the word Humanish —
   no version number and no tagline. `Contract/README.md` §"The mark, and where
   it comes from" has the measurements.
 - **Double-clicking the title bar fills the screen, and the next double-click

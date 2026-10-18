@@ -3,7 +3,7 @@ import Foundation
 /// Where each document's audience and goal is kept.
 ///
 /// In user defaults beside the answered notes, and for the same reason: who a
-/// draft is for is the author's instruction to KONVO, not part of the draft,
+/// draft is for is the author's instruction to Humanish, not part of the draft,
 /// and writing it into the Markdown or a dotfile beside it would put an
 /// editor's bookkeeping into a folder somebody syncs and commits.
 ///

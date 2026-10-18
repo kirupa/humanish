@@ -58,7 +58,7 @@ public struct CritiquePlace: Equatable, Sendable {
 /// The draft's blocks, each with the place a note in it is named for.
 ///
 /// Counted the way the editor draws the draft rather than the way CommonMark
-/// would parse it. KONVO's renderer is line-based — ATX headings only, a list
+/// would parse it. Humanish's renderer is line-based — ATX headings only, a list
 /// or quote line is one wherever it falls, a fence hides everything until it
 /// closes — and a label that disagreed with the page would be one more way of
 /// pointing at the wrong paragraph.

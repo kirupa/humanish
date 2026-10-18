@@ -45,7 +45,7 @@ $asset = static fn (string $path): string => $assetBase === '' ? $path : "$asset
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Markdown Editor</title>
+<title>Humanish</title>
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="<?= htmlspecialchars($asset('css/themes.css'), ENT_QUOTES) ?>">
 <link rel="stylesheet" href="<?= htmlspecialchars($asset('css/app.css'), ENT_QUOTES) ?>">
@@ -58,7 +58,7 @@ $asset = static fn (string $path): string => $assetBase === '' ? $path : "$asset
 <body>
 <?php if ($startupError !== null): ?>
 <div class="me-startup-error">
-  <h1>Markdown Editor cannot start</h1>
+  <h1>Humanish cannot start</h1>
   <p><?= htmlspecialchars($startupError->getMessage(), ENT_QUOTES) ?></p>
   <p class="me-startup-error__recovery">
     <?= htmlspecialchars($startupError->recoverySuggestion(), ENT_QUOTES) ?>
@@ -68,7 +68,7 @@ $asset = static fn (string $path): string => $assetBase === '' ? $path : "$asset
 <div class="me-app" id="app" hidden>
 
   <div class="me-menubar" role="menubar" id="menubar">
-    <span class="me-menubar__title">Markdown Editor</span>
+    <span class="me-menubar__title">Humanish</span>
   </div>
 
   <div class="me-toolbar" id="toolbar"></div>

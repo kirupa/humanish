@@ -1,7 +1,9 @@
-# Welcome to Markdown Editor
+# Welcome to Humanish
 
-This is the **web build** of the same editor that ships for macOS. It uses the
-*same* parsing, formatting, and range-mapping logic, ported to JavaScript.
+Humanish is a clean space to write documents and have AI help review them — the
+**web build** of the same editor that ships for macOS. It uses the *same*
+parsing, formatting, and range-mapping logic, ported to JavaScript, with your
+Markdown file as the canonical document underneath.
 
 ## Three ways to work
 

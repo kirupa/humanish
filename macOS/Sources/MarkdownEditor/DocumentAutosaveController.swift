@@ -83,7 +83,7 @@ final class DocumentAutosaveController: ObservableObject {
                 code: 1,
                 userInfo: [
                     NSLocalizedDescriptionKey:
-                        "KONVO couldn’t autosave "
+                        "Humanish couldn’t autosave "
                         + fileURL.lastPathComponent + ".",
                     NSLocalizedRecoverySuggestionErrorKey:
                         "Use File > Save to save the document manually."

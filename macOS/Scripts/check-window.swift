@@ -601,7 +601,7 @@ enum Harness {
         // macOS 27.2 keeps a closed document's window alive, editor and all,
         // and never sends the editor `onDisappear`. So it went on autosaving
         // and watching its file behind a window nobody could see, and twice
-        // that ended in "KONVO couldn't autosave" over the writer's next
+        // that ended in "Humanish couldn't autosave" over the writer's next
         // document. The windows here are kept alive the same way: by holding
         // on to them.
         func recorded(_ name: String) -> (url: URL, document: SaveRecorder)? {

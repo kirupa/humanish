@@ -178,7 +178,7 @@ struct MarkdownEditorCommands: Commands {
         }
 
         CommandGroup(before: .windowList) {
-            Button("Welcome to KONVO") {
+            Button("Welcome to Humanish") {
                 WelcomeWindowController.shared.show()
             }
             Divider()

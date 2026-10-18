@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Builds "Markdown Editor.app" for the iOS Simulator without Xcode.
+# Builds "Humanish.app" for the iOS Simulator without Xcode.
 #
 # The normal way to build this is to open MarkdownEditor.xcodeproj, and that
 # is what most people should do. This script exists so the app can be built,
@@ -16,7 +16,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 REPO="$(cd "$ROOT/.." && pwd)"
-APP_NAME="Markdown Editor"
+APP_NAME="Humanish"
 EXECUTABLE_NAME="MarkdownEditor"
 APP_DIR="$ROOT/build/$APP_NAME.app"
 DEPLOYMENT_TARGET="${IOS_DEPLOYMENT_TARGET:-17.0}"

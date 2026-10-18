@@ -58,7 +58,7 @@ uninstall:
 	@./Scripts/uninstall-app.sh
 
 run: app
-	@open "$(CURDIR)/build/KONVO.app"
+	@open "$(CURDIR)/build/Humanish.app"
 
 test:
 	@./Scripts/run-tests.sh

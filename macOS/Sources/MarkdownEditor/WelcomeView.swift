@@ -61,7 +61,7 @@ struct WelcomeView: View {
                 .frame(width: Self.logoSize, height: Self.logoSize)
                 .accessibilityHidden(true)
 
-            Text("KONVO")
+            Text("Humanish")
                 .font(.system(size: 25, weight: .semibold))
                 .foregroundStyle(primaryText)
                 .padding(.top, 14)

@@ -268,7 +268,7 @@ struct CritiqueSettingsView: View {
                 }
             }
             Text(
-                "KONVO critiques your draft using this skill. Update pulls the "
+                "Humanish critiques your draft using this skill. Update pulls the "
                     + "latest version of it."
             )
             .font(.caption)

@@ -5,7 +5,7 @@
 
 set -euo pipefail
 
-APP_NAME="KONVO"
+APP_NAME="Humanish"
 DESTINATION="${INSTALL_DIR:-/Applications}"
 INSTALLED_APP="$DESTINATION/$APP_NAME.app"
 LSREGISTER="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister"

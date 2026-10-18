@@ -27,7 +27,7 @@ workspace="$(
     php -r 'require "'"$root"'/bootstrap.php"; echo MarkdownEditor\Workspace::prepare()->root();'
 )"
 
-echo "Markdown Editor"
+echo "Humanish"
 echo "  editor     http://127.0.0.1:$port/"
 echo "  tests      http://127.0.0.1:$port/tests/"
 echo "  workspace  $workspace"

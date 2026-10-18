@@ -221,7 +221,7 @@ final class WindowChromeDelegate: NSObject, NSWindowDelegate {
     /// So the editor kept doing everything it had been doing. An edit made by
     /// another app to a file already closed here was applied to the closed
     /// editor, which then tried to autosave a document that no longer existed
-    /// and put up "KONVO couldn't autosave". Typing and pressing ⌘W inside the
+    /// and put up "Humanish couldn't autosave". Typing and pressing ⌘W inside the
     /// autosave delay did the same, over a file that had in fact saved.
     ///
     /// Selector-based, under a name of its own: `windowWillClose(_:)` is the

@@ -1,12 +1,12 @@
 # The cross-platform contract
 
 This directory is the answer to a question that had no good answer before it
-existed: **if you are writing this editor for a fourth platform, what exactly do
+existed: **if you are writing Humanish for a fourth platform, what exactly do
 you have to match?**
 
 The three READMEs are product requirements documents, and they are thorough, but
 each describes one build. They tell you what the Mac app does, or what the web
-app does. None of them tells you what *the editor* does, independently of the
+app does. None of them tells you what *Humanish* does, independently of the
 platform it happens to be running on — and none of them is checkable. A new
 build could satisfy every sentence in all three and still write documents the
 others cannot open.

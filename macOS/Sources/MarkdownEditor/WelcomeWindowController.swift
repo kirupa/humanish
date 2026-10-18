@@ -99,7 +99,7 @@ final class WelcomeWindowController: NSObject {
             backing: .buffered,
             defer: false
         )
-        welcomeWindow.title = "Welcome to KONVO"
+        welcomeWindow.title = "Welcome to Humanish"
         welcomeWindow.titleVisibility = .hidden
         welcomeWindow.titlebarAppearsTransparent = true
         welcomeWindow.isMovableByWindowBackground = true

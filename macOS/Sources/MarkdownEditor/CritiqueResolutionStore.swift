@@ -9,7 +9,7 @@ import MarkdownEditorCore
 /// and commit.
 ///
 /// The cost is that the decisions are per-machine, and that moving the file
-/// while it is closed loses them — a move KONVO sees, a Save As or a rename of
+/// while it is closed loses them — a move Humanish sees, a Save As or a rename of
 /// the open document, takes them along. Both are the right trade for a record
 /// of "I already read that one": losing it costs a dismissal, and the
 /// alternative costs the tidiness of somebody's project.

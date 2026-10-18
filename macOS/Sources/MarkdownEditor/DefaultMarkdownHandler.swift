@@ -57,7 +57,7 @@ enum DefaultHandlerError: LocalizedError {
     case launchServices(OSStatus)
 
     var errorDescription: String? {
-        "KONVO could not be made the default Markdown application."
+        "Humanish could not be made the default Markdown application."
     }
 
     var failureReason: String? {
@@ -71,6 +71,6 @@ enum DefaultHandlerError: LocalizedError {
 
     var recoverySuggestion: String? {
         "Select a Markdown file in Finder, choose File ▸ Get Info, and set "
-            + "\"Open with\" to KONVO."
+            + "\"Open with\" to Humanish."
     }
 }

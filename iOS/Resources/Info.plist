@@ -6,7 +6,7 @@
   <key>CFBundleDevelopmentRegion</key>
   <string>en</string>
   <key>CFBundleDisplayName</key>
-  <string>Markdown Editor</string>
+  <string>Humanish</string>
   <key>CFBundleExecutable</key>
   <string>$(EXECUTABLE_NAME)</string>
   <key>CFBundleDocumentTypes</key>
@@ -29,7 +29,7 @@
   <key>CFBundleInfoDictionaryVersion</key>
   <string>6.0</string>
   <key>CFBundleName</key>
-  <string>Markdown Editor</string>
+  <string>Humanish</string>
   <key>CFBundlePackageType</key>
   <string>APPL</string>
   <key>CFBundleShortVersionString</key>
@@ -39,7 +39,7 @@
   <key>LSSupportsOpeningDocumentsInPlace</key>
   <true/>
   <key>NSPhotoLibraryUsageDescription</key>
-  <string>Markdown Editor copies photos you choose into an assets folder beside your document, so images stay with the file.</string>
+  <string>Humanish copies photos you choose into an assets folder beside your document, so images stay with the file.</string>
   <key>UIApplicationSceneManifest</key>
   <dict>
     <key>UIApplicationSupportsMultipleScenes</key>

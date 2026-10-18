@@ -15,7 +15,7 @@ declare(strict_types=1);
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Markdown Editor — Tests</title>
+<title>Humanish — Tests</title>
 <link rel="stylesheet" href="../css/themes.css">
 <style>
   body {
@@ -52,7 +52,7 @@ declare(strict_types=1);
 </style>
 </head>
 <body>
-<h1>Markdown Editor — Tests</h1>
+<h1>Humanish — Tests</h1>
 <p class="subtitle">
   The ported core, running against the same expectations as the macOS build.
 </p>

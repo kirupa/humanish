@@ -234,7 +234,7 @@ export class WelcomeScreen {
 
     const title = document.createElement('h1');
     title.className = 'me-welcome__title';
-    title.textContent = 'Markdown Editor';
+    title.textContent = 'Humanish';
 
     const actions = document.createElement('div');
     actions.className = 'me-welcome__actions';

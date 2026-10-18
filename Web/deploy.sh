@@ -37,7 +37,7 @@
 # file this script uploads and a mistake could serve. Set it on the server, in
 # the environment, once — see WA-17.
 #
-#     MDE_HOST=ftp.example.com MDE_PUBLIC=public_html/markdown \
+#     MDE_HOST=ftp.example.com MDE_PUBLIC=public_html/humanish \
 #       MDE_PRIVATE=markdown-editor MDE_PRIVATE_ABS=/home/me/markdown-editor \
 #       MDE_WORKSPACE=/home/me/kirupaMarkdown \
 #       Web/deploy.sh
@@ -156,7 +156,7 @@ printf '<?php return %s;\n' "'v/$asset_version'" > "$stage/public/asset-base.php
   if [[ -n "$htpasswd" ]]; then
     echo
     echo "AuthType Basic"
-    echo "AuthName \"Markdown Editor\""
+    echo "AuthName \"Humanish\""
     echo "AuthUserFile $htpasswd"
     echo "Require valid-user"
   fi

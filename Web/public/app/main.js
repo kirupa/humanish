@@ -1008,7 +1008,7 @@ explorer.onOpenFile = (item) => {
     showError(
       new ApiError(
         `“${item.name}” is not a Markdown document.`,
-        'Markdown Editor opens files with a .md or .markdown extension.'
+        'Humanish opens files with a .md or .markdown extension.'
       )
     );
     return;

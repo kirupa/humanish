@@ -7,7 +7,7 @@ file is only the things that are easy to get wrong and cheap to state.
 ## Running the macOS app
 
 ```bash
-cd macOS && make run           # builds build/KONVO.app and opens it
+cd macOS && make run           # builds build/Humanish.app and opens it
 cd macOS && make test          # the shared package's unit tests
 cd macOS && make check-window  # a real document window, measured
 ```
@@ -17,7 +17,7 @@ rail gets looked at. `make check-window` is how it gets asserted: it opens the
 real editor in a real window and reads the frame back, so "the rail fits" is a
 check rather than something somebody has to remember to eyeball.
 
-## KONVO opens wide enough for the rail
+## Humanish opens wide enough for the rail
 
 **A document window must contain the document column *and* the critique rail.
 A window that opens with the rail clipped at its trailing edge is a bug report,

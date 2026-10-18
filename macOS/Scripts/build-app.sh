@@ -4,7 +4,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 CONFIGURATION="${CONFIGURATION:-release}"
-APP_NAME="KONVO"
+APP_NAME="Humanish"
 EXECUTABLE_NAME="MarkdownEditor"
 APP_DIR="$ROOT/build/$APP_NAME.app"
 
@@ -57,7 +57,7 @@ chmod 755 "$APP_DIR/Contents/MacOS/$EXECUTABLE_NAME"
 if [ "${MDE_DEV_BUNDLE:-0}" = "1" ]; then
   plutil -replace CFBundleIdentifier -string 'com.kirupa.markdown-editor.dev' \
     "$APP_DIR/Contents/Info.plist"
-  plutil -replace CFBundleName -string 'KONVO (Dev)' \
+  plutil -replace CFBundleName -string 'Humanish (Dev)' \
     "$APP_DIR/Contents/Info.plist"
   # Without this the dev build advertises itself to Launch Services as another
   # handler for .md, and Finder may hand real documents to it.
